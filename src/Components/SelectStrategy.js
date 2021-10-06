@@ -1,9 +1,9 @@
 import React from "react";
 import { useTypedSelector } from "../hooks/useTypeSelector";
-import ListGroup from "react-bootstrap/ListGroup";
 import StrategyItem from "./StrategyItem";
 import { IoMdArrowBack } from "react-icons/io";
 import { withRouter } from "react-router";
+import { ListGroup } from "react-bootstrap";
 
 const SelectStrategy = ({ history }) => {
   const { strategies } = useTypedSelector(({ strategy }) => strategy);

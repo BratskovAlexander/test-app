@@ -4,7 +4,7 @@ import { useAction } from "../hooks/strategyAction";
 import { withRouter } from "react-router";
 import { MdDelete } from "react-icons/md";
 
-import ListGroup from "react-bootstrap/ListGroup";
+import { ListGroup } from "react-bootstrap";
 
 const StrategyItem = ({ strategy, index, btnDelete, history, onSelected }) => {
   let className = "list-group-item";

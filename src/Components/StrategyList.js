@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { useTypedSelector } from "../hooks/useTypeSelector";
 import StrategyItem from "./StrategyItem";
-import ListGroup from "react-bootstrap/ListGroup";
 import { useAction } from "../hooks/strategyAction";
-import Container from 'react-bootstrap/Container'
+import { Container } from "react-bootstrap/lib/Tab";
+import { ListGroup } from "react-bootstrap";
 
 const StrategyList = () => {
   const { strategies } = useTypedSelector(({ strategy }) => strategy);

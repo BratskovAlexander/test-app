@@ -19,7 +19,7 @@
 
 .list-group-item.selected {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
 }
 
 .list-group-item {
