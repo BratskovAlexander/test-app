@@ -3,8 +3,7 @@ import { NavLink } from "react-router-dom";
 import { useTypedSelector } from "../hooks/useTypeSelector";
 import StrategyItem from "./StrategyItem";
 import { useAction } from "../hooks/strategyAction";
-import { Container } from "react-bootstrap/lib/Tab";
-import { ListGroup } from "react-bootstrap";
+import { Button, Container, List } from "@mui/material";
 
 const StrategyList = () => {
   const { strategies } = useTypedSelector(({ strategy }) => strategy);
@@ -17,7 +16,7 @@ const StrategyList = () => {
   return (
     <Container className="container-for-mobile">
       <h1 className="heading">List of strategies</h1>
-      <ListGroup>
+      <List>
         {strategies.map((strategy, index) => {
           return (
             <StrategyItem
@@ -28,9 +27,11 @@ const StrategyList = () => {
             />
           );
         })}
-      </ListGroup>
-      <NavLink className="btn btn-custom" to="/create-strategy">
-        Add Strategy
+      </List>
+      <NavLink to="/create-strategy">
+        <Button className="btn btn-custom" variant="contained">
+          Add Strategy
+        </Button>
       </NavLink>
     </Container>
   );

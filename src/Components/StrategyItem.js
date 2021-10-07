@@ -3,8 +3,7 @@ import { useTypedSelector } from "../hooks/useTypeSelector";
 import { useAction } from "../hooks/strategyAction";
 import { withRouter } from "react-router";
 import { MdDelete } from "react-icons/md";
-
-import { ListGroup } from "react-bootstrap";
+import { Button, ListItem } from "@mui/material";
 
 const StrategyItem = ({ strategy, index, btnDelete, history, onSelected }) => {
   let className = "list-group-item";
@@ -24,21 +23,21 @@ const StrategyItem = ({ strategy, index, btnDelete, history, onSelected }) => {
   };
 
   return (
-    <ListGroup.Item className={className}>
+    <ListItem sx={{ justifyContent: "space-between" }} className={className}>
       <span className="index">{index + 1}</span>
       <div onClick={onSelected && getCurrentStrategy(strategy)}>
         {strategy.title}
       </div>
       {btnDelete && (
-        <button
+        <Button
           type="button"
           className="btn btn-delete"
           onClick={removeStrategy(strategy.id)}
         >
           <MdDelete />
-        </button>
+        </Button>
       )}
-    </ListGroup.Item>
+    </ListItem>
   );
 };
 

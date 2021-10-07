@@ -3,7 +3,7 @@ import { useTypedSelector } from "../hooks/useTypeSelector";
 import StrategyItem from "./StrategyItem";
 import { IoMdArrowBack } from "react-icons/io";
 import { withRouter } from "react-router";
-import { ListGroup } from "react-bootstrap";
+import { Button, List } from "@mui/material"
 
 const SelectStrategy = ({ history }) => {
   const { strategies } = useTypedSelector(({ strategy }) => strategy);
@@ -14,12 +14,12 @@ const SelectStrategy = ({ history }) => {
 
   return (
     <div className="container container-for-mobile">
-      <button className="btn btn-back" onClick={goToBack}>
+      <Button className="btn btn-back" onClick={goToBack}>
         <IoMdArrowBack />
         Back
-      </button>
+      </Button >
       <h1 className="heading">Select a strategy</h1>
-      <ListGroup>
+      <List>
         {strategies.map((strategy, index) => {
           return (
             <StrategyItem
@@ -30,7 +30,7 @@ const SelectStrategy = ({ history }) => {
             />
           );
         })}
-      </ListGroup>
+      </List>
     </div>
   );
 };

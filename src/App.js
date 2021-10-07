@@ -50,7 +50,6 @@ const App = () => {
       fetch("https://jsonplaceholder.typicode.com/todos?_limit=5")
         .then((response) => response.json())
         .then((allStrategies) => {
-          console.log(allStrategies)
           setTimeout(() => {
             getStrategy(allStrategies);
           }, 3000);
