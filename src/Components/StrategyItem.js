@@ -25,7 +25,7 @@ const StrategyItem = ({ strategy, index, btnDelete, history, onSelected }) => {
   return (
     <ListItem sx={{ justifyContent: "space-between" }} className={className}>
       <span className="index">{index + 1}</span>
-      <div onClick={onSelected && getCurrentStrategy(strategy)}>
+      <div className="item" onClick={onSelected && getCurrentStrategy(strategy)}>
         {strategy.title}
       </div>
       {btnDelete && (

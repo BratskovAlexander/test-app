@@ -58,6 +58,7 @@ const CreateStrategy = ({ history }) => {
         label="Add some text"
         placeholder="Add some text"
         multiline
+        fullWidth
         value={value}
         onChange={(event) => setValue(event.target.value)}
       />
